@@ -11,7 +11,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.content.Context;
 
-import com.nolanlawson.ottawarinks.R.string;
 import com.nolanlawson.ottawarinks.util.UtilLogger;
 
 public class HttpHelper {
@@ -28,10 +27,10 @@ public class HttpHelper {
 			+ "sq_location=;"
 			+ "sq_session_type=;"
 			+ "sq_keywords1=;"
-			+ "start=%s";
+			+ "start=";
 	
-	private static String fetchPageOfData(Context context, int start) {
-		String url = String.format(OTTAWA_RINKS_URL, start + 1); // 1-based
+	public static String fetchPageOfData(Context context, int start) {
+		String url = OTTAWA_RINKS_URL + (start + 1); // 1-based
 		return postRequestAndGetResponse(context, url);
 	}
 

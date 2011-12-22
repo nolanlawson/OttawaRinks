@@ -65,4 +65,12 @@ public class EventResponse {
 	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
+	@Override
+	public String toString() {
+		return "EventResponse [dayNumber=" + dayNumber + ", endDate=" + endDate
+				+ ", endTime=" + endTime + ", sessionType=" + sessionType
+				+ ", location=" + location + ", alternativeLocation="
+				+ alternativeLocation + ", locationMap=" + locationMap
+				+ ", startDate=" + startDate + ", startTime=" + startTime + "]";
+	}
 }

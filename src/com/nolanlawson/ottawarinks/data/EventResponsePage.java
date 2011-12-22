@@ -1,5 +1,6 @@
 package com.nolanlawson.ottawarinks.data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public class EventResponsePage {
 
-	private List<EventResponse> eventResponses;
+	private List<EventResponse> eventResponses = new ArrayList<EventResponse>();
 	private int startRow;
 	private int toRow;
 	private int totalRows;
@@ -37,4 +38,12 @@ public class EventResponsePage {
 	public void setTotalRows(int totalRows) {
 		this.totalRows = totalRows;
 	}
+	@Override
+	public String toString() {
+		return "EventResponsePage [eventResponses=" + eventResponses
+				+ ", startRow=" + startRow + ", toRow=" + toRow
+				+ ", totalRows=" + totalRows + "]";
+	}
+	
+	
 }
